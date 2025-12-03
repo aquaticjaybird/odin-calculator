@@ -1,0 +1,11 @@
+.keypad-container,
+.keypad-left,
+.keypad-right,
+.keypad-row {
+    display: flex;
+}
+
+.keypad-left,
+.keypad-right {
+    flex-direction: column;
+}

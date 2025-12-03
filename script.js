@@ -1,3 +1,5 @@
+const keypadNumRows = document.querySelectorAll(".keypad-numerical");
+
 let operandDisplayA;
 let operandDisplayB;
 let operatorDisplay;
@@ -28,3 +30,10 @@ function operate(operator, a, b) {
             throw new Error("None/non-existent operator");
     }
 }
+
+function handleNumInput(e) {
+    console.log(`${e.target.textContent}`);
+}
+
+keypadNumRows.forEach(element =>
+    element.addEventListener("click", handleNumInput));

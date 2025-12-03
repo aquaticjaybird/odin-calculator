@@ -1,3 +1,4 @@
+.calc-container,
 .keypad-container,
 .keypad-left,
 .keypad-right,
@@ -5,6 +6,7 @@
     display: flex;
 }
 
+.calc-container,
 .keypad-left,
 .keypad-right {
     flex-direction: column;

@@ -1,8 +1,9 @@
 const keypadNumRows = document.querySelectorAll(".keypad-numerical");
 
-let operandDisplayA;
-let operandDisplayB;
-let operatorDisplay;
+let display;
+let operandA;
+let operandB;
+let operator;
 
 function add(a, b) {
     return a + b;

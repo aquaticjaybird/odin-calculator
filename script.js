@@ -57,6 +57,9 @@ function handleKeypadInput(e) {
             const operatorData = e.target.dataset.operatorType;
             handleOperatorInput(operatorData);
             return;
+        case "btn-equal":
+            handleEqualInput();
+            return;
         default:
             return;
     }
@@ -72,6 +75,17 @@ function handleOperatorInput(operator) {
         clearDisplay();
     }
     operatorStored = operator;
+}
+function handleEqualInput() {
+    if (operandA && operatorStored && display) {
+        operandB = display;
+        display = operate(operatorStored, operandA, operandB);
+        displayDiv.textContent = display;
+        isDisplayingResult = true;
+        operandA = null;
+        operandB = null;
+        operatorStored = null;
+    }
 }
 
 keypadContainerDiv.addEventListener("click", handleKeypadInput);

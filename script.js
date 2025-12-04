@@ -42,7 +42,13 @@ function hasPointInDisplay() {
 }
 
 function handleNumInput(e) {
-    console.log(`${e.target.textContent}`);
+    const num = e.target.textContent;
+    if (num !== ".") {
+        appendToDisplay(num);
+    }
+    if (num === "." && !hasPointInDisplay()) {
+        appendToDisplay(num);
+    }
 }
 
 keypadNumRows.forEach(element =>

@@ -37,6 +37,9 @@ function appendToDisplay(value) {
     display += value;
     displayDiv.textContent = display;
 }
+function hasPointInDisplay() {
+    return display.includes(".");
+}
 
 function handleNumInput(e) {
     console.log(`${e.target.textContent}`);

@@ -1,10 +1,10 @@
 const keypadNumRows = document.querySelectorAll(".keypad-numerical");
 const displayDiv = document.querySelector(".display");
 
-let display;
-let operandA;
-let operandB;
-let operator;
+let display = "";
+let operandA = 0;
+let operandB = 0;
+let operator = "";
 
 function add(a, b) {
     return a + b;

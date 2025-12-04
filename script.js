@@ -2,9 +2,9 @@ const keypadContainerDiv = document.querySelector(".keypad-container");
 const displayDiv = document.querySelector(".display");
 
 let display = "";
-let operandA = 0;
-let operandB = 0;
-let operator = "";
+let operandA = null;
+let operandB = null;
+let operatorStored = "";
 
 function add(a, b) {
     return a + b;

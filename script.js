@@ -40,6 +40,10 @@ function appendToDisplay(value) {
 function hasPointInDisplay() {
     return display.includes(".");
 }
+function clearDisplay() {
+    display = "";
+    displayDiv.textContent = "";
+}
 
 function handleKeypadInput(e) {
     const firstClass = e.target.classList[0];

@@ -12,8 +12,8 @@
         <div class="keypad-container">
             <div class="keypad-left">
                 <div class="keypad-row">
-                    <button class="btn-operator">&divide;</button>
-                    <button class="btn-operator">&times;</button>
+                    <button data-operator-type="divide" class="btn-operator">&divide;</button>
+                    <button data-operator-type="multiply" class="btn-operator">&times;</button>
                     <button class="btn-clear">C</button>
                 </div>
                 <div class="keypad-row keypad-numerical">
@@ -38,8 +38,8 @@
             </div>
             <div class="keypad-right">
                 <button class="btn-backspace">&#x232B;</button>
-                <button class="btn-operator">-</button>
-                <button class="btn-operator">+</button>
+                <button data-operator-type="subtract" class="btn-operator">-</button>
+                <button data-operator-type="add" class="btn-operator">+</button>
                 <button class="btn-equal">=</button>
             </div>
         </div>

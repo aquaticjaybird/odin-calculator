@@ -43,10 +43,7 @@ function hasPointInDisplay() {
 
 function handleNumInput(e) {
     const num = e.target.textContent;
-    if (num !== ".") {
-        appendToDisplay(num);
-    }
-    if (num === "." && !hasPointInDisplay()) {
+    if ((num !== ".") || (num === "." && !hasPointInDisplay())) {
         appendToDisplay(num);
     }
 }

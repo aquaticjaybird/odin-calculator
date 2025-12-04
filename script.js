@@ -52,6 +52,10 @@ function handleKeypadInput(e) {
             const num = e.target.textContent;
             handleNumInput(num);
             return;
+        case "btn-operator":
+            const operatorData = e.target.dataset.operatorType;
+            handleOperatorInput(operatorData);
+            return;
         default:
             return;
     }
@@ -60,6 +64,13 @@ function handleNumInput(num) {
     if ((num !== ".") || (num === "." && !hasPointInDisplay())) {
         appendToDisplay(num);
     }
+}
+function handleOperatorInput(operator) {
+    if (operandA === null) {
+        operandA = display;
+        clearDisplay();
+    }
+    operatorStored = operator;
 }
 
 keypadContainerDiv.addEventListener("click", handleKeypadInput);

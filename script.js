@@ -1,4 +1,4 @@
-const keypadNumRows = document.querySelectorAll(".keypad-numerical");
+const keypadContainerDiv = document.querySelector(".keypad-container");
 const displayDiv = document.querySelector(".display");
 
 let display = "";
@@ -41,12 +41,21 @@ function hasPointInDisplay() {
     return display.includes(".");
 }
 
-function handleNumInput(e) {
-    const num = e.target.textContent;
+function handleKeypadInput(e) {
+    const firstClass = e.target.classList[0];
+    switch (firstClass) {
+        case "btn-num":
+            const num = e.target.textContent;
+            handleNumInput(num);
+            return;
+        default:
+            return;
+    }
+}
+function handleNumInput(num) {
     if ((num !== ".") || (num === "." && !hasPointInDisplay())) {
         appendToDisplay(num);
     }
 }
 
-keypadNumRows.forEach(element =>
-    element.addEventListener("click", handleNumInput));
+keypadContainerDiv.addEventListener("click", handleKeypadInput);

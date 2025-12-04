@@ -1,4 +1,5 @@
 const keypadNumRows = document.querySelectorAll(".keypad-numerical");
+const displayDiv = document.querySelector(".display");
 
 let display;
 let operandA;
@@ -30,6 +31,11 @@ function operate(operator, a, b) {
         default:
             throw new Error("None/non-existent operator");
     }
+}
+
+function appendToDisplay(value) {
+    display += value;
+    displayDiv.textContent = display;
 }
 
 function handleNumInput(e) {

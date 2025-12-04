@@ -5,6 +5,7 @@ let display = "";
 let operandA = null;
 let operandB = null;
 let operatorStored = "";
+let isDisplayingResult = false;
 
 function add(a, b) {
     return +a + +b;

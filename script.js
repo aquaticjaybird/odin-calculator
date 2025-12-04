@@ -65,6 +65,10 @@ function handleKeypadInput(e) {
     }
 }
 function handleNumInput(num) {
+    if (isDisplayingResult) {
+        clearDisplay();
+        isDisplayingResult = false;
+    }
     if ((num !== ".") || (num === "." && !hasPointInDisplay())) {
         appendToDisplay(num);
     }

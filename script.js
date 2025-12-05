@@ -44,6 +44,7 @@ function hasPointInDisplay() {
 function clearDisplay() {
     display = "";
     displayDiv.textContent = "";
+    isDisplayingResult = false;
 }
 
 function handleKeypadInput(e) {

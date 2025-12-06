@@ -68,7 +68,9 @@ function handleKeypadInput(e) {
 function handleNumInput(num) {
     if (isDisplayingResult) {
         clearDisplay();
-        isDisplayingResult = false;
+    } else if (isDisplayingResult && operatorStored) {
+        operandA = display;
+        clearDisplay();
     }
     if ((num !== ".") || (num === "." && !hasPointInDisplay())) {
         appendToDisplay(num);
@@ -79,7 +81,17 @@ function handleOperatorInput(operator) {
         operandA = display;
         clearDisplay();
     }
-    operatorStored = operator;
+    if (operatorStored && display) {
+        operandB = display;
+        display = operate(operatorStored, operandA, operandB);
+        displayDiv.textContent = display;
+        isDisplayingResult = true;
+        operandA = display;
+        operandB = null;
+        operatorStored = operator;
+    } else {
+        operatorStored = operator;
+    }
 }
 function handleEqualInput() {
     if (operandA && operatorStored && display) {

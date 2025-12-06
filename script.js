@@ -83,6 +83,48 @@ function handleKeypadInput(e) {
             return;
     }
 }
+function handleKeyboardInput(e) {
+    const validOperators = {
+        "+":"add",
+        "-":"subtract",
+        "*":"multiply",
+        "/":"divide",
+    };
+    let caseType;
+    if (isStringNumber(e.key)) {
+        caseType = "num";
+    } else if (validOperators[e.key]) {
+        caseType = "operator"
+    } else {
+        caseType = e.key;
+    }
+    switch (caseType) {
+        case "num":
+            handleNumInput(e.key);
+            break;
+        case ".":
+        case ",":
+            handleNumInput(".");
+            break;
+        case "operator":
+            const operatorString = validOperators[e.key];
+            handleOperatorInput(operatorString);
+            break;
+        case "Enter":
+        case "=":
+            handleEqualInput();
+            break;
+        case "c":
+        case "C":
+            handleClearInput();
+            break;
+        case "Backspace":
+            handleBackspaceInput();
+            break;
+        default:
+            return;
+    }
+}
 function handleNumInput(num) {
     if (isDisplayingResult) {
         clearDisplay();

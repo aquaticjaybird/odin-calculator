@@ -92,7 +92,7 @@ function handleOperatorInput(operator) {
     if (operatorStored && display) {
         operandB = display;
         display = operate(operatorStored, operandA, operandB);
-        displayDiv.textContent = display;
+        displayDiv.textContent = roundOverflow(display);
         isDisplayingResult = true;
         operandA = display;
         operandB = null;
@@ -105,7 +105,7 @@ function handleEqualInput() {
     if (operandA && operatorStored && display) {
         operandB = display;
         display = operate(operatorStored, operandA, operandB);
-        displayDiv.textContent = display;
+        displayDiv.textContent = roundOverflow(display);
         isDisplayingResult = true;
         operandA = null;
         operandB = null;

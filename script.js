@@ -72,6 +72,9 @@ function handleKeypadInput(e) {
         case "btn-clear":
             handleClearInput();
             return;
+        case "btn-backspace":
+            handleBackspaceInput();
+            return;
         default:
             return;
     }
@@ -120,6 +123,10 @@ function handleClearInput() {
     operandA = null;
     operandB = null;
     operatorStored = "";
+}
+function handleBackspaceInput() {
+    display = display.slice(0, -1);
+    displayDiv.textContent = display;
 }
 
 keypadContainerDiv.addEventListener("click", handleKeypadInput);

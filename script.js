@@ -46,6 +46,14 @@ function clearDisplay() {
     displayDiv.textContent = "";
     isDisplayingResult = false;
 }
+function roundOverflow(num) {
+    const limit = 10;
+    if (num.toString().length > limit) {
+        return num.toPrecision(limit);
+    } else {
+        return num;
+    }
+}
 
 function handleKeypadInput(e) {
     const firstClass = e.target.classList[0];

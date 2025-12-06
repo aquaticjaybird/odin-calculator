@@ -171,8 +171,9 @@ function handleClearInput() {
     operatorStored = "";
 }
 function handleBackspaceInput() {
-    display = display.slice(0, -1);
+    display = display.toString().slice(0, -1);
     displayDiv.textContent = display;
 }
 
 keypadContainerDiv.addEventListener("click", handleKeypadInput);
+document.addEventListener("keydown", handleKeyboardInput);

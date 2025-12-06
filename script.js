@@ -54,6 +54,12 @@ function roundOverflow(num) {
         return num;
     }
 }
+function calculateAndDisplay() {
+    operandB = display;
+    display = operate(operatorStored, operandA, operandB);
+    displayDiv.textContent = roundOverflow(display);
+    isDisplayingResult = true;
+}
 
 function isStringNumber(str) {
     return !Number.isNaN(Number(str));

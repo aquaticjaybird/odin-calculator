@@ -109,7 +109,7 @@ function handleEqualInput() {
         isDisplayingResult = true;
         operandA = null;
         operandB = null;
-        operatorStored = null;
+        operatorStored = "";
     }
 }
 

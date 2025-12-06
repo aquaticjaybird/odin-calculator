@@ -55,6 +55,10 @@ function roundOverflow(num) {
     }
 }
 
+function isStringNumber(str) {
+    return !Number.isNaN(Number(str));
+}
+
 function handleKeypadInput(e) {
     const firstClass = e.target.classList[0];
     switch (firstClass) {

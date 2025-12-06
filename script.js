@@ -69,6 +69,9 @@ function handleKeypadInput(e) {
         case "btn-equal":
             handleEqualInput();
             return;
+        case "btn-clear":
+            handleClearInput();
+            return;
         default:
             return;
     }
@@ -111,6 +114,12 @@ function handleEqualInput() {
         operandB = null;
         operatorStored = "";
     }
+}
+function handleClearInput() {
+    clearDisplay();
+    operandA = null;
+    operandB = null;
+    operatorStored = "";
 }
 
 keypadContainerDiv.addEventListener("click", handleKeypadInput);

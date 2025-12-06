@@ -148,10 +148,8 @@ function handleOperatorInput(operator) {
         isDisplayingResult = true;
         operandA = display;
         operandB = null;
-        operatorStored = operator;
-    } else {
-        operatorStored = operator;
     }
+    operatorStored = operator;
 }
 function handleEqualInput() {
     if (operandA && operatorStored && display) {

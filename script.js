@@ -58,11 +58,17 @@ function roundOverflow(num) {
         return num;
     }
 }
+function handleCalcError() {
+    display = "";
+}
 function calculateAndDisplay() {
     operandB = display;
     display = operate(operatorStored, operandA, operandB);
     displayDiv.textContent = roundOverflow(display);
     isDisplayingResult = true;
+    if (display === "error") {
+        handleCalcError();
+    }
 }
 
 function isStringNumber(str) {

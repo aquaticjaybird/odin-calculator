@@ -7,6 +7,9 @@
     --background-color: var(--palette-white);
     --primary-calc-color: var(--palette-black);
     --primary-text-color: var(--palette-white);
+    --button-num-color: var(--palette-dark-gray);
+    --button-operator-color: var(--palette-light-blue);
+    --button-utility-color: var(--palette-light-blue);
 }
 
 * {
@@ -63,4 +66,16 @@ body {
 .keypad-right button,
 .keypad-row [class^="btn-"] {
     flex: auto;
+}
+
+.keypad-numerical button {
+    background-color: var(--button-num-color);
+}
+
+.btn-operator {
+    background-color: var(--button-operator-color);
+}
+
+.btn-utility {
+    background-color: var(--button-utility-color);
 }

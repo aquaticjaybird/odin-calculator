@@ -147,6 +147,10 @@ function handleNumInput(num) {
     }
 }
 function handleOperatorInput(operator) {
+    if (operator === "subtract" && display.toString().length === 0) {
+        appendToDisplay("-");
+        return;
+    }
     if (operandA === null) {
         operandA = display;
         clearDisplay();

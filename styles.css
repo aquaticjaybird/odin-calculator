@@ -1,3 +1,14 @@
+:root {
+    --palette-black: #222831;
+    --palette-dark-gray: #31363F;
+    --palette-light-blue: #76ABAE;
+    --palette-white: #EEEEEE;
+
+    --background-color: var(--palette-white);
+    --primary-calc-color: var(--palette-black);
+    --primary-text-color: var(--palette-white);
+}
+
 * {
     font-family: sans-serif;
 }

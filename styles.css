@@ -59,3 +59,8 @@ body {
 .keypad-right {
     flex: 1 1 auto;
 }
+
+.keypad-right button,
+.keypad-row [class^="btn-"] {
+    flex: auto;
+}

@@ -47,6 +47,7 @@ body {
     flex: 0 1 25%;
 }
 
+.keypad-row,
 .keypad-container {
     flex: auto;
 }

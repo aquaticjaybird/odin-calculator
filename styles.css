@@ -45,6 +45,8 @@ body {
     aspect-ratio: 5/6;
     max-width: 100%;
     background-color: var(--primary-calc-color);
+    box-sizing: border-box;
+    padding: 0.5vh;
 }
 
 .display-container {

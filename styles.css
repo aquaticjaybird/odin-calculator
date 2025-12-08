@@ -47,8 +47,14 @@ body {
     background-color: var(--primary-calc-color);
 }
 
-.display {
+.display-container {
     flex: 0 1 25%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.display {
     font-size: 9.5vh;
 }
 

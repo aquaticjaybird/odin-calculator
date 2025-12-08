@@ -55,7 +55,7 @@ body {
 }
 
 .display {
-    font-size: 5vh;
+    font-size: clamp(16px, 10vw, 9vh);
 }
 
 .keypad-row,

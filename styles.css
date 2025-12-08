@@ -65,11 +65,11 @@ body {
 }
 
 .keypad-left {
-    flex: 3 1 auto;
+    flex: 3 1 75%;
 }
 
 .keypad-right {
-    flex: 1 1 auto;
+    flex: 1 1 25%;
 }
 
 .keypad-right button,

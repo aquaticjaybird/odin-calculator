@@ -72,9 +72,8 @@ body {
     flex: 1 1 25%;
 }
 
-.keypad-right button,
-.keypad-row button {
-    flex: auto;
+.keypad-numerical button {
+    flex-basis: calc(100% / 3);
 }
 
 .btn-num,

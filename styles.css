@@ -87,3 +87,11 @@ body {
 .keypad-right .btn-equal {
     flex-basis: 50%;
 }
+
+.btn-num.btn-decimal {
+    flex-basis: calc(100% / 3);
+}
+
+.btn-num.btn-zero {
+    flex-basis: calc(100% * 2 / 3);
+}

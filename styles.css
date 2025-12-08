@@ -54,6 +54,8 @@ body {
     display: flex;
     justify-content: end;
     align-items: end;
+    box-sizing: border-box;
+    padding: 0.5vh;
 }
 
 .display {

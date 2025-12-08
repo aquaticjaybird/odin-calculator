@@ -79,3 +79,11 @@ body {
 .btn-utility {
     background-color: var(--button-utility-color);
 }
+
+.keypad-right button {
+    flex-basis: 25%;
+}
+
+.keypad-right .btn-equal {
+    flex-basis: 50%;
+}

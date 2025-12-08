@@ -76,6 +76,12 @@ body {
     flex: auto;
 }
 
+.btn-num,
+.btn-operator,
+.btn-utility {
+    border-style: none;
+}
+
 .btn-num {
     background-color: var(--button-num-color);
 }

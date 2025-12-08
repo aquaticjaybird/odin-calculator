@@ -68,7 +68,7 @@ body {
     flex: auto;
 }
 
-.keypad-numerical button {
+.btn-num {
     background-color: var(--button-num-color);
 }
 

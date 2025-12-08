@@ -97,11 +97,11 @@ body {
 }
 
 .keypad-right button {
-    flex-basis: 25%;
+    flex-basis: 20%;
 }
 
 .keypad-right .btn-equal {
-    flex-basis: 50%;
+    flex-basis: 40%;
 }
 
 .btn-num.btn-decimal {

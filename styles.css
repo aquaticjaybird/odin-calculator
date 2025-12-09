@@ -10,8 +10,13 @@
     --primary-calc-color: var(--palette-black);
     --primary-text-color: var(--palette-white);
     --button-num-color: var(--palette-dark-gray);
+    --button-num-hover-color: var(--palette-light-blue);
+    --button-num-active-color: var(--palette-gray);
     --button-operator-color: var(--palette-light-blue);
+    --button-operator-hover-color: var(--palette-dark-gray);
+    --button-operator-active-color: var(--palette-blue);
     --button-utility-color: var(--palette-light-blue);
+    --button-border: var(--palette-black);
 }
 
 * {

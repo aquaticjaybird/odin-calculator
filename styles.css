@@ -92,7 +92,25 @@ body {
 .btn-num,
 .btn-operator,
 .btn-utility {
-    border-style: none;
+    border: var(--button-border) solid 0.5vh;
+}
+
+.btn-num:hover {
+    color: var(--button-num-hover-color);
+}
+
+.btn-operator:hover,
+.btn-utility:hover {
+    color: var(--button-operator-hover-color);
+}
+
+.btn-num:active {
+    background-color: var(--button-num-active-color);
+}
+
+.btn-operator:active,
+.btn-utility:active {
+    background-color: var(--button-operator-active-color);
 }
 
 .btn-num {

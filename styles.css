@@ -1,7 +1,9 @@
 :root {
     --palette-black: #222831;
     --palette-dark-gray: #31363F;
+    --palette-gray: #4b5261;
     --palette-light-blue: #76ABAE;
+    --palette-blue: #649092;
     --palette-white: #EEEEEE;
 
     --background-color: var(--palette-white);
